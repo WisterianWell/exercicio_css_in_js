@@ -7,6 +7,12 @@ export const Formulario = styled.form`
   padding: 32px;
   border-radius: 12px;
   margin-top: 40px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `
 
 export const BotaoPesquisa = styled.button`
@@ -18,9 +24,21 @@ export const BotaoPesquisa = styled.button`
   color: ${(props) => props.theme.corSecundaria};
   margin-left: 8px;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 16px;
+    font-size: 14px;
+    padding: 0 12px;
+    height: 30px;
+  }
 `
 
 export const CampoPesquisa = styled.input`
   padding: 0 16px;
-  outline-color: var(--cor-principal);
+  outline-color: ${(props) => props.theme.corPrimaria};
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
